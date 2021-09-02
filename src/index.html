@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard</title>
+</head>
+<body>
+  <main class="p-3">
+    <h1>LeaderBoard</h1>
+    <div class="d-flex justify-content-around">
+      <div class="d-flex flex-column">
+        <div class="d-flex justify-content-between">
+          <h2>Recent Scores</h2>
+          <button type="button">Refresh</button>
+        </div>
+        <ul id="leaderboard-container" class="list-unstyled border border-2 border-dark">
+        </ul>
+      </div>
+
+      <div class="d-flex flex-column">
+        <h2>Add your Score</h2>
+        <input type="text" placeholder="Your name">
+        <input type="text" placeholder="Your score">
+        <button class="ms-auto" type="button">Submit</button>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>
