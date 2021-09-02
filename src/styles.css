@@ -1,0 +1,3 @@
+.leaderboard-rows:nth-child(even) {
+  background-color: #dcdcdc;
+}
