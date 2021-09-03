@@ -14,14 +14,17 @@ export default class AddScore {
     if (this.user && this.score) {
       document.getElementById('input-user').value = '';
       document.getElementById('input-score').value = '';
-      this.store.addNewItem(this.user, this.score);
+      return this.store.addNewItem(this.user, this.score);
     }
+
+    return null;
   }
 
   AddItemOnClick() {
     this.addButton.addEventListener('click', () => {
-      this.AddItem();
-      this.UI.displayLeaderboard();
+      this.AddItem().then(() => {
+        this.UI.displayLeaderboard();
+      });
     });
   }
 }
