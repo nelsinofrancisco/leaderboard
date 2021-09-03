@@ -2,9 +2,9 @@
 
 # Todo-list
 
-> In this project we're challenged to create a todo-list, that has functions of adding and removing tasks and a drag-drop feature that can re-order the tasks;
+> In this project we're challenged to create a leaderboard, that uses a API to handle the data when adding a new user & score, and to retrieve a list with all users and scores that were added.
 
-![screenshot](./screenshot1.jpg)
+![screenshot](./screenshot.png)
 
 ## Built With
 
@@ -76,7 +76,6 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledges
-
 
 ## 📝 License
 
