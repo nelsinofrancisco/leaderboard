@@ -11,6 +11,7 @@ export default class AddScore {
   AddItem() {
     this.user = document.getElementById('input-user').value;
     this.score = document.getElementById('input-score').value;
+
     if (this.user && this.score) {
       document.getElementById('input-user').value = '';
       document.getElementById('input-score').value = '';
