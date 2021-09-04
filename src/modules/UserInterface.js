@@ -8,15 +8,24 @@ export default class UserInterface {
 
   displayLeaderboard() {
     this.data = this.store.getData();
+
+    this.leaderboardContainer.innerHTML = `<div class="spinner-border position-absolute" "role="status">
+    </div>`;
+
     this.data.then((result) => {
-      this.leaderboardContainer.innerHTML = '';
-      result.forEach((item, index) => {
-        this.leaderboardContainer.innerHTML += `<li id="score-${index}" class="leaderboard-rows d-flex">
-        <p>${item.user}</p>
-        <span class="me-1">:</span>
-        <p>${item.score}</p>
+      setTimeout(
+        () => {
+          this.leaderboardContainer.innerHTML = '';
+          result.forEach((item, index) => {
+            this.leaderboardContainer.innerHTML += `<li id="score-${index}" class="leaderboard-rows d-flex">
+        <p class="paragraph-style">${item.user}</p>
+        <span class="span-style me-1">:</span>
+        <p class="paragraph-style">${item.score}</p>
         </li>`;
-      });
+          });
+        },
+        1300,
+      );
     });
   }
 }

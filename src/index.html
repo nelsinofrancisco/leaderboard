@@ -8,24 +8,24 @@
 </head>
 <body>
   <main class="p-3 mx-auto">
-    <h1 class="pb-5">LeaderBoard</h1>
+    <h1 class="title-style underline-effect pb-5">LeaderBoard</h1>
     <div class="d-flex justify-content-center flex-wrap">
       <div class="left-content d-flex flex-column">
         <div class="left-content-header d-flex">
-          <h2 class="me-4">Recent Scores</h2>
-          <button id="refresh-score" class="default-button" type="button">Refresh</button>
+          <h2 class="title-style me-4">Recent Scores</h2>
+          <button id="refresh-score" class="default-button ms-auto" type="button">Refresh</button>
         </div>
-        <ul id="leaderboard-container" class="list-unstyled">
+        <ul id="leaderboard-container" class="leaderboard-container list-unstyled position-relative">
         </ul>
       </div>
 
       <div class="right-content d-flex flex-column">
         <div class="right-content-header">
-          <h2>Add your Score</h2>
+          <h2 class="title-style">Add your Score</h2>
         </div>
-        <input id="input-user" type="text" placeholder="Your name">
-        <input id="input-score" type="number" placeholder="Your score">
-        <button id="add-score" class="ms-auto" type="button">Submit</button>
+        <input id="input-user" class="default-input-style mb-1" type="text" placeholder="Your name">
+        <input id="input-score" class="default-input-style mb-2" type="number" placeholder="Your score">
+        <button id="add-score" class="default-button ms-auto" type="button">Submit</button>
       </div>
     </div>
 

@@ -1,7 +1,7 @@
 export default class Store {
   constructor() {
     this.data = [];
-    this.scoresUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/9OlVNu9qj0a5KjO3uf38/scores/';
+    this.scoresUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/d1dDW4ko7MbofE6gsxJV/scores/';
   }
 
   addNewItem(user, score) {

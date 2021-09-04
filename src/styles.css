@@ -1,73 +1,179 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=VT323&display=swap');
 
 :root {
-  --main-font: #23d117;
+  --main-color: #23d117;
+  --secundary-color: #66f1a0;
+  --main-bc-color: #000;
 }
 
 * {
   margin: 0;
   padding: 0;
+  font-family: 'VT323', monospace;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--main-color);
   box-sizing: border-box;
 }
 
+*::selection {
+  background-color: white;
+  color: var(--main-bc-color);
+}
+
 body {
-  background-color: #000;
+  background-color: var(--main-bc-color);
 }
 
 main {
-  max-width: 1000px;
+  max-width: 1200px;
+  max-height: 100vh;
 }
 
-h1,
-h2,
-h3 {
-  font-family: 'Permanent Marker', cursive;
-  color: #23d117;
-  margin-bottom: 0 !important;
+/* BUTTON STYLES */
+.default-button {
+  background-color: var(--main-bc-color);
+  border-top: 1px solid var(--main-color);
+  border-left: 1px solid var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+  border-right: 3px solid var(--main-color);
+  color: var(--main-color);
+  padding: 0.3rem 0.4rem;
+  font-weight: 800;
 }
 
-p,
-span {
-  font-family: 'VT323', monospace;
-  color: #23d117;
+.default-button:active {
+  border-top: 3px solid var(--main-color);
+  border-left: 3px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  border-right: 1px solid var(--main-color);
 }
 
-.left-content {
-  margin-right: 5rem;
-  padding: 1rem;
-  border: 5px solid #23d117;
-  border-radius: 5px;
+/* INPUT STYLES */
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0;
 }
 
-.left-content-header {
-  border-bottom: 1px solid #66f1a0;
-  padding-bottom: 1rem;
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-p {
+.default-input-style {
+  background-color: var(--main-bc-color);
+  color: var(--main-color);
+  border: none;
+  border-bottom: 2px solid var(--main-color);
+}
+
+.default-input-style:focus {
+  border: 2px solid var(--main-color);
+  outline: none;
+}
+
+.default-input-style::placeholder {
+  color: var(--main-color);
+}
+
+/* FONT STYLES */
+
+.paragraph-style {
   margin: 0 !important;
 }
 
-h1 {
-  padding: 1px;
+.underline-effect {
   text-decoration: underline;
-  text-decoration-color: #23d117;
+  text-decoration-color: var(--main-color);
   text-decoration-thickness: 5px;
   text-underline-offset: 5px;
+}
+
+.title-style {
+  font-family: 'Permanent Marker', cursive;
+  color: var(--main-color);
+  margin-bottom: 0 !important;
+}
+
+/* LEFT CONTENT */
+.left-content {
+  padding: 1rem;
+  border-bottom: 3rem;
+  margin-bottom: 2rem;
+  border: 5px solid var(--main-color);
+  border-radius: 5px;
+  width: 100%;
+  min-height: 300px;
+  max-height: 450px;
+  overflow-y: hidden;
+}
+
+.leaderboard-container {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.leaderboard-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.leaderboard-container::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.leaderboard-container::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+}
+
+.leaderboard-container::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color);
+}
+
+.left-content-header {
+  border-bottom: 1px solid var(--secundary-color);
+  padding-bottom: 1rem;
 }
 
 .leaderboard-rows {
   align-items: center;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #66f1a0;
+  border-bottom: 1px solid var(--secundary-color);
 }
 
+.spinner-border {
+  top: 50%;
+  left: 45%;
+  color: var(--main-color);
+}
+
+/* RIGHT CONTENT */
 .right-content {
   padding: 1rem;
-  border: 5px solid #23d117;
+  border: 5px solid var(--main-color);
   border-radius: 5px;
+  width: 100%;
 }
 
 .right-content-header {
-  padding: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .left-content {
+    width: auto;
+  }
+
+  .right-content {
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .left-content {
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
 }
