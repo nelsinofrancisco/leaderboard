@@ -1,3 +1,73 @@
-.leaderboard-rows:nth-child(even) {
-  background-color: #dcdcdc;
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=VT323&display=swap');
+
+:root {
+  --main-font: #23d117;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+}
+
+main {
+  max-width: 1000px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Permanent Marker', cursive;
+  color: #23d117;
+  margin-bottom: 0 !important;
+}
+
+p,
+span {
+  font-family: 'VT323', monospace;
+  color: #23d117;
+}
+
+.left-content {
+  margin-right: 5rem;
+  padding: 1rem;
+  border: 5px solid #23d117;
+  border-radius: 5px;
+}
+
+.left-content-header {
+  border-bottom: 1px solid #66f1a0;
+  padding-bottom: 1rem;
+}
+
+p {
+  margin: 0 !important;
+}
+
+h1 {
+  padding: 1px;
+  text-decoration: underline;
+  text-decoration-color: #23d117;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 5px;
+}
+
+.leaderboard-rows {
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #66f1a0;
+}
+
+.right-content {
+  padding: 1rem;
+  border: 5px solid #23d117;
+  border-radius: 5px;
+}
+
+.right-content-header {
+  padding: 1rem;
 }
